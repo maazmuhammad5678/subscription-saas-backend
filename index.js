@@ -30,13 +30,23 @@ app.get("/",(req,res)=>{
 });
 
 // Connection
-connectMongoDb(process.env.MONGO_URI)
-.then(()=>{
-    console.log("MongoDb Connected");
-}).catch((error)=>{
-    console.log("MongoDB connection failed:",error.message);
+
+const mongoUri = process.env.MONGO_URI;
+
+console.log("Mongo URI exists:", Boolean(mongoUri));
+console.log(
+  "Mongo URI scheme:",
+  mongoUri ? mongoUri.split(":")[0] : "MISSING"
+);
+
+connectMongoDb(mongoUri)
+  .then(() => {
+    console.log("MongoDB Connected");
+  })
+  .catch((error) => {
+    console.log("MongoDB connection failed:", error.message);
     process.exit(1);
-});
+  });
 
 app.listen(port,()=>{
     console.log(`Server Started At Port ${port}`);
