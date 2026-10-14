@@ -1,5 +1,5 @@
 
-const Plan = require("../models/Plan");
+const Plan = require("../models/plan");
 
 // Get all subscription plans
 async function getAllPlans(req, res) {

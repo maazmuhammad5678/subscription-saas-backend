@@ -1,6 +1,6 @@
 
-const Subscription = require("../models/Subscription");
-const Plan = require("../models/Plan");
+const Subscription = require("../models/subscription");
+const Plan = require("../models/plan");
 
 // Subscribe to a plan
 async function subscribeToPlan(req, res) {

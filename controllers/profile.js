@@ -1,6 +1,6 @@
 
-const User = require("../models/User");
-const Subscription = require("../models/Subscription");
+const User = require("../models/user");
+const Subscription = require("../models/subscription");
 
 // Get logged-in user's profile
 async function getProfile(req, res) {
