@@ -1,5 +1,5 @@
 
-const Subscription = require("../models/Subscription");
+const Subscription = require("../models/subscription");
 
 function requirePremium(req, res, next) {
     checkPremiumSubscription(req, res, next);
